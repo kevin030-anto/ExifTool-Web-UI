@@ -17,11 +17,18 @@ The web interface (`app.py`, `static/`, `templates/`) handles file uploads and d
 ## How to Run
 
 1. Ensure you have Python installed.
-2. Install dependencies:
+2. create/activate a virtualenv:
+   ```bash
+   python -m venv .venv
+   ```
+   ```bash
+   .venv\Scripts\Activate.ps1
+   ```
+4. Install dependencies:
    ```bash
    pip install flask
    ```
-3. Run the application:
+5. Run the application:
    ```bash
    python app.py
    ```
@@ -34,5 +41,6 @@ The web interface (`app.py`, `static/`, `templates/`) handles file uploads and d
 - `exiftool.exe`: The core executable.
 
 ## 💡 Author
+
 
 GitHub: [@kevin030-anto](https://github.com/kevin030-anto)

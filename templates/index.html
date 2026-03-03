@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExifTool Pro Interface</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="background-glob"></div>
+    <div class="background-glob glob-2"></div>
+
+    <div class="container">
+        <header>
+            <h1>ExifTool <span>UI</span></h1>
+            <p>Professional Metadata Editor & Viewer</p>
+        </header>
+
+        <main>
+            <!-- Upload Section -->
+            <div class="upload-zone" id="drop-zone">
+                <input type="file" id="file-input" multiple accept="image/*" hidden>
+                <div class="icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 16V8M12 8L15 11M12 8L9 11" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M3 15V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V15"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <h3>Drag & Drop images here</h3>
+                <p>or click to browse</p>
+            </div>
+
+            <!-- Batch Actions -->
+            <div class="batch-actions" id="batch-actions" style="display: none;">
+                <button class="btn-clean-all" onclick="cleanAllMetadata()">Clear All Metadata</button>
+                <button class="btn-download-all" onclick="downloadAllCleaned()" disabled>Download All Cleaned
+                    (Zip)</button>
+            </div>
+
+            <!-- File List -->
+            <div class="file-list" id="file-list">
+                <!-- Items will be injected here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Metadata Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="modal-title">Metadata</h2>
+                <button class="close-btn" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-content">
+                <pre id="metadata-output"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

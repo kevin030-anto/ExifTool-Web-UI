@@ -22,7 +22,7 @@ The web interface (`app.py`, `static/`, `templates/`) handles file uploads and d
    python -m venv .venv
    ```
    ```bash
-   .venv\Scripts\Activate.ps1
+   .venv\Scripts\Activate.bat
    ```
 4. Install dependencies:
    ```bash
@@ -32,6 +32,7 @@ The web interface (`app.py`, `static/`, `templates/`) handles file uploads and d
    ```bash
    python app.py
    ```
+You can use app.bat to speed-up the process. If not work or error check Python is installed and ```pip install flask``` before run app.bat.
 
 ## Project Structure
 - `app.py`: Flask backend server.
